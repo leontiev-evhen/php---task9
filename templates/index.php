@@ -24,9 +24,67 @@
 
             <div class="row">
                 <h2>Task 9</h2>
-                <div class="col-md-12">
-                    <?php echo $html;?>
-                </div>
+                <?php echo (isset($error) ? $error : '');?>
+
+                <?php if (!empty($ParamsHtmlHelper)) { ?>
+
+                    <div class="col-md-12 mt-50">
+                        <h2>Params HtmlHelper</h2>
+                        <?php echo $ParamsHtmlHelper;?>
+                    </div>
+
+                <?php } ?>
+
+                <?php if (!empty($htmlSelect)) { ?>
+
+                    <div class="col-md-12 mt-50">
+                        <h2>Select</h2>
+                        <div class="form-group">
+                            <label for="sel1">Select list:</label>
+                            <?php echo $htmlSelect;?>
+                        </div>
+                    </div>
+
+                <?php } ?>
+
+                <?php if (!empty($htmlTable)) { ?>
+
+                    <div class="col-md-12 mt-50">
+                        <h2>Table</h2>
+                        <?php echo $htmlTable;?>
+                    </div>
+
+                <?php } ?>
+
+                <?php if (!empty($htmlList)) { ?>
+
+                    <div class="col-md-12 mt-50">
+                        <h2>List ul-ol</h2>
+                        <?php echo $htmlList;?>
+                    </div>
+
+                <?php } ?>
+
+                <?php if (!empty($htmlDlList)) { ?>
+
+                    <div class="col-md-12 mt-50">
+                        <h2>List dl</h2>
+                        <?php echo $htmlDlList;?>
+                    </div>
+
+                <?php } ?>
+
+                <?php if (!empty($htmlInput1)) { ?>
+
+                    <div class="col-md-12 mt-50">
+                        <h2>Input</h2>
+                        <label><?php echo $htmlInput1;?>Input 1</label>
+                        <label><?php echo $htmlInput2;?>Input 2</label>
+                        <label><?php echo $htmlInput3;?>Input 3</label>
+                    </div>
+
+                <?php } ?>
+
             </div>
 
         </div>
